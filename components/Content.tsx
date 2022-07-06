@@ -1,9 +1,6 @@
-// import Accordion from "./Accordion";
-
 import { Features } from "./Features";
 import Hero from "./Hero";
 
-// import { Accordion } from "./Accordion";
 
 export function Content(props:any) {
   return (
@@ -13,5 +10,3 @@ export function Content(props:any) {
     </div>
   );
 }
-
-export default Content;
