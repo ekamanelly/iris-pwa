@@ -3,7 +3,7 @@ import { Footer, Header, Logo, Nav } from "../components/navigation";
 import search from "../assets/image/search.png";
 import { navList } from "../constants/nav";
 import logoUrl from "../assets/image/logo.png";
-import {Content} from "../components/Content";
+import { Content } from "../components/Content";
 import { Input } from "../components/form";
 
 function PlayGround(Props: any) {
@@ -20,7 +20,7 @@ function PlayGround(Props: any) {
             <Nav items={navList} />
           </Header>
         ),
-        body: <Content/>,
+        body: <Content />,
         footer: (
           <Footer>
             <Logo imagesUrl={logoUrl} />

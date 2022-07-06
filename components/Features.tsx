@@ -1,5 +1,7 @@
 import Image from "next/image";
 import fourCircleImage from "../assets/image/fourCircle.png";
+import { featureList } from "../constants/featureslist";
+import { FeatureCard } from "./homeContent/FeatureCard";
 
 export function Features({ children }: any) {
   return (
@@ -31,18 +33,53 @@ export function Features({ children }: any) {
               </p>
             </div>
             <div className="flex ">
-                <div className="flex">one</div>
-                <div className="flex">one</div>
-                <div className="flex">one</div>
-                <div className="flex">one</div>
+              <div className="flex">one</div>
+              <div className="flex">one</div>
+              <div className="flex">one</div>
+              <div className="flex">one</div>
             </div>
           </div>
         </div>
-        <div className="w-[591px] h-[438px] bg-red-900">right</div>
+        <div className="w-[591px]   ">
+         <div className="pt-[31px] pl-[29px] pr-[25px] pb-[48px] bg-red-900">
+         <div className="flex justify-between items-center mb-[23px]">
+            <div className="flex items-center">
+              <div className="w-[13.9px] h-[13.5px] mr-[10px] ">
+                <Image src={fourCircleImage} layout="responsive" />
+              </div>
+              <p>Lorem</p>
+            </div>
+            <div>
+              <div className="w-[13.9px] h-[13.5px]">
+                <Image src={fourCircleImage} />
+              </div>
+            </div>
+          </div>
+          <div className="w-[511px] h-[320px] overflow-y-auto">
+            <div className="flex flex-wrap">
+              {featureList.map((feature) => (
+                <FeatureCard {...feature} />
+              ))}
+            </div>
+          </div>
+         </div>
+          <div className="mt-[24px] h-[75px] flex it pl-[29px] pr-[25px] bg-red-900">
+            <div className="w-full flex justify-between items-center">
+              <div className="flex items-center">
+                <div className="w-[13.9px] h-[13.5px] mr-[10px] bg-red-800 ">
+                  <Image src={fourCircleImage} layout="responsive" />
+                </div>
+                <p>Lorem</p>
+              </div>
+              <div>
+                <div className="w-[13.9px] h-[13.5px] bg-red-700">
+                  <Image src={fourCircleImage} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      {/* {Children.LeftChild}
-            {Children.RightChild} */}
     </div>
   );
 }
