@@ -10,8 +10,8 @@ interface ILayout {
 
 function Layout({children }: ILayout) {
   return (
-    <div>
-      <div>
+    <div className="flex justify-center">
+      <div className="max-w-[1440px]">
         {children.header}
         {children.body}
         {children.footer}
