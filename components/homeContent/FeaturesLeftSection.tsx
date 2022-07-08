@@ -1,26 +1,36 @@
 import Image from "next/image";
-import arrowImage from '../../assets/image/arrow.png'
-import fourCircleImage from "../../assets/image/fourCircle.png";
-
+import { Button } from "../form";
+import discordImage from "../../assets/image/discord.svg";
+import igImage from "../../assets/image/ig.png";
+import twitterImage from "../../assets/image/twitter.png";
+import siteImage from "../../assets/image/site.png";
+import { FeaturesBoard } from "./FeatureBoard";
+const featureLinks = [
+  {
+    text: "Lorem ipsum.com",
+    extraStyle: "text-iris-red",
+    src: siteImage,
+  },
+  {
+    text: "@Lorem ipsum",
+    extraStyle: "text-iris-red",
+    src: discordImage,
+  }, {
+    text: "@Lorem ipsum.com",
+    extraStyle: "text-iris-red",
+    src: igImage,
+  }, {
+    text: "@Lorem ipsum.com",
+    extraStyle: "text-white",
+    src: twitterImage,
+  },
+];
 export function FeaturesLeftSection() {
   return (
-    <div className="w-[591px] h-[344px] mr-[19px] pt-[31px] pl-[29px] pr-[25px] bg-iris-gray rounded-md">
-      <div className="flex justify-between items-center mb-[23px]">
-        <div className="flex items-center">
-          <div className="w-[13.9px] h-[13.5px] mr-[10px] ">
-            <Image src={fourCircleImage} layout="responsive" />
-          </div>
-          <p>Lorem</p>
-        </div>
-        <div>
-          <div className="w-[13.9px] h-[13.5px]">
-            <Image src={arrowImage} />
-          </div>
-        </div>
-      </div>
-      <div className="h-[109px] w-[471px]">
-        <div className="mb-[42px]">
-          <p className=" text-[14px] text-white font-normal ">
+    <FeaturesBoard>
+      <div className="max-w-[471px] pb-[53px]  mt-[23px]">
+        <div className="lg:mb-[42px] sm:mb-[40px] lg:h-[109px] sm:h-[149px] h-[156px] mb-[25px]">
+          <p className=" text-[14px] font-normal leading-[22px]  ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -29,15 +39,14 @@ export function FeaturesLeftSection() {
             pariatur
           </p>
         </div>
-        <div className="flex ">
-          <div className="flex">one</div>
-          <div className="flex">one</div>
-          <div className="flex">one</div>
-          <div className="flex">one</div>
+        <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1   gap-y-[20px] h-[68px]">
+          {featureLinks.map((feature) => (
+            <Button text={feature.text} extraStyle={feature.extraStyle}>
+              <Image src={feature.src} layout="responsive" />
+            </Button>
+          ))}
         </div>
       </div>
-    </div>
+    </FeaturesBoard>
   );
 }
-
-// export default FeatureLeftSection;

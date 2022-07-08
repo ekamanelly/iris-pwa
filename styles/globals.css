@@ -57,3 +57,8 @@ a {
     background-position: 50% 0%;
   }
 }
+
+
+.accordion-h {
+  height: max-content;
+}

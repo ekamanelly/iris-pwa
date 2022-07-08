@@ -4,14 +4,14 @@ import irisImage from "../../assets/image/iris.png";
 export function Accordion(props: any) {
   return (
     <div className="flex justify-center pt-[42px] mb-[81px]">
-      <div className="w-[1339px]  relative">
+      <div className="w-full  relative">
         <div className=" h-60 absolute inset-0 flex justify-center">
           <div className=" transform translate-y-[169px] z-10 w-[149px] h-[149px]">
             <Image layout="responsive" src={irisImage} />
           </div>
         </div>
         <div className="flex w-full overflow-x-auto container-snap">
-          <div className="flex   ">
+          <div className="flex">
             <div className="w-[264px] h-[264px]  ">
               <Image
                 layout="responsive"
