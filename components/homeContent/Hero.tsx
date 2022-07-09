@@ -18,7 +18,7 @@ export function Hero(props: any) {
           Lorem ipsum
         </h2>
         <p className=" font-normal text-[16px] leading-5">
-          Created by: <span className="text-iris-red">Lorem ipsum </span>
+          Created by: <span className="text-iris-red whitespace-nowrap">Lorem ipsum </span>
         </p>
         <p className="leading-[22px] text-center">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
