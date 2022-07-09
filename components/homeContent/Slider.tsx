@@ -8,20 +8,19 @@ interface ISlider {
 
 export function Slider({images,children}: ISlider) {
   return (
-    <div className="flex justify-center pt-[42px] mb-[81px] md:px-5">
+    <div className="flex justify-center  ">
       <div className="w-full  relative">
-        <div className=" h-60 absolute inset-0 flex justify-center">
-          <div className=" transform translate-y-[169px] z-10 w-[149px] h-[149px]">
+        <div className="absolute inset-0 flex justify-center">
+          <div className="transform translate-y-[10.56rem] z-10 w-[9.31rem] h-[9.31rem]">
             {children }
           </div>
         </div>
         <div className="flex w-full overflow-x-auto container-snap">
           <div className="flex">
-            {images.map(image=>(<div className="w-[264px] h-[264px] cursor-pointer  " key={UUID()}>
+            {images.map(image=>(<div className="w-[21.86rem] h-full cursor-pointer  " key={UUID()}>
             <Image
-                layout="responsive"
-                width={200}
-                height={200}
+                height={265}
+                width={349}
                 src={image}
               />
             </div>))}

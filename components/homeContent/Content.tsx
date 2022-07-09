@@ -1,10 +1,12 @@
-export function   Content({children}: any) {
+import { Fragment } from "react";
+
+export function Content({ children }: any) {
   return (
-    <div className="content-gradient pb-[66px]">
-      <div className="h-[6px] bg-gradient-to-r from-[#665AEF] to-[#FC364C]" />
-      {children}
-    </div>
+    <Fragment>
+      <div className="h-[0.38rem] bg-gradient-to-r from-[#665AEF] to-[#FC364C]" />
+      <div className="content-gradient px-[1.28rem] pb-[4.13rem] pt-[2.63rem] h-[87.94rem]">
+        {children}
+      </div>
+    </Fragment>
   );
 }
-
-

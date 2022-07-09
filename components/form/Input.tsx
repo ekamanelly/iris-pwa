@@ -10,7 +10,7 @@ export function Input({ leadingImageUrl, onChange }: any) {
 
 
   const LeadIcon = leadingImageUrl && (
-    <div className="w-[17.77px] h-[17.77px] ml-[19.8px] mr-[19.5px]">
+    <div className="w-[1.31rem] h-[1.31rem] ml-[1.138rem] mr-[1.13rem]">
       <Image src={leadingImageUrl} layout="responsive" />
     </div>
   );

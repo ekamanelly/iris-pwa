@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface ITitle {
   LeadingImage?: React.ReactChild;
   Title?: React.ReactChild;
