@@ -2,7 +2,8 @@ import Layout from "../components/Layout";
 import { Footer, Header, Logo, Nav } from "../components/navigation";
 import search from "../assets/image/search.png";
 import { navList } from "../constants";
-import logoUrl from "../assets/image/logo.png";
+import logo from "../assets/image/logo.png";
+import irisImage from "../assets/image/iris.png";
 import { Content } from "../components/homeContent/Content";
 import { Input } from "../components/form";
 import { Slider } from "../components/homeContent/Slider";
@@ -21,15 +22,15 @@ function Home(Props: any) {
       {{
         header: (
           <Header>
-            <Logo imagesUrl={logoUrl} />
+            <Logo imagesUrl={logo} />
             <Input onChange={handleOnchange} leadingImageUrl={search} />
             <Nav items={navList} />
           </Header>
         ),
         body: (
           <Content>
-            <Slider images={slideList} >
-            <Logo imagesUrl={logoUrl} />
+            <Slider images={slideList}>
+              <Logo imagesUrl={irisImage} />
             </Slider>
             <Hero />
             <Features>
@@ -40,7 +41,7 @@ function Home(Props: any) {
         ),
         footer: (
           <Footer>
-            <Logo imagesUrl={logoUrl} />
+            <Logo imagesUrl={logo} />
           </Footer>
         ),
       }}
