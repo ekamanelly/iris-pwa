@@ -1,5 +1,4 @@
 export {Header} from './Header'
-export {SideNav} from './SideNav'
 export {Footer} from './Footer'
 export {Nav} from './Nav'
 export {Logo} from './Logo'

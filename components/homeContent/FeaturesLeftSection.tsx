@@ -1,33 +1,25 @@
 import Image from "next/image";
 import { Button } from "../form";
-import discordImage from "../../assets/image/discord.svg";
-import igImage from "../../assets/image/ig.png";
-import twitterImage from "../../assets/image/twitter.png";
-import siteImage from "../../assets/image/site.png";
-import { FeaturesBoard } from "./FeatureBoard";
-const featureLinks = [
-  {
-    text: "Lorem ipsum.com",
-    extraStyle: "text-iris-red",
-    src: siteImage,
-  },
-  {
-    text: "@Lorem ipsum",
-    extraStyle: "text-iris-red",
-    src: discordImage,
-  }, {
-    text: "@Lorem ipsum.com",
-    extraStyle: "text-iris-red",
-    src: igImage,
-  }, {
-    text: "@Lorem ipsum.com",
-    extraStyle: "text-white",
-    src: twitterImage,
-  },
-];
-export function FeaturesLeftSection() {
+import { Accordion } from "./Accordion";
+import arrowImage from "../../assets/image/arrow.png";
+import fourCircleImage from "../../assets/image/fourCircle.png";
+import { AccordionHeader } from "./AccordionHeader";
+import { useState } from "react";
+import {v4 as UUID} from 'uuid'
+
+interface IFeaturesLeftSection {
+  links:any[]
+}
+
+export function FeaturesLeftSection({links}:IFeaturesLeftSection) {
+  const [open, setOpen] = useState(false);
   return (
-    <FeaturesBoard>
+    <Accordion >
+       <AccordionHeader
+        LeadingImage={<Image src={fourCircleImage} layout="responsive" />}
+        Title={<p className="font-extrabold text-base">Lorem</p>}
+        TrailingImage={<Image src={arrowImage} layout="responsive" />}
+      />
       <div className="max-w-[471px] pb-[53px]  mt-[23px]">
         <div className="lg:mb-[42px] sm:mb-[40px] lg:h-[109px] sm:h-[149px] h-[156px] mb-[25px]">
           <p className=" text-[14px] font-normal leading-[22px]  ">
@@ -39,14 +31,14 @@ export function FeaturesLeftSection() {
             pariatur
           </p>
         </div>
-        <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1   gap-y-[20px] h-[68px]">
-          {featureLinks.map((feature) => (
-            <Button text={feature.text} extraStyle={feature.extraStyle}>
+        <div className="grid grid-cols-2   gap-y-[20px] h-[68px]">
+          {links.map((feature) => (
+            <Button text={feature.text} extraStyle={feature.extraStyle} key={UUID()}>
               <Image src={feature.src} layout="responsive" />
             </Button>
           ))}
         </div>
       </div>
-    </FeaturesBoard>
+    </Accordion>
   );
 }

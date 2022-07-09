@@ -1,30 +1,61 @@
-import Image from "next/image";
-import { featureList } from "../../constants/featureslist";
-import { FeatureCard } from "./FeatureCard";
-
-import arrowImage from "../../assets/image/arrow.png";
-import fourCircleImage from "../../assets/image/fourCircle.png";
-import FeatureTittle from "./FeatureTittle";
-import { FeaturesBoard } from "./FeatureBoard";
 import { useState } from "react";
+import { FeatureCard } from "./FeatureCard";
+import { Accordion } from "./Accordion";
+import arrowImage from "../../assets/image/arrow.png";
+import questionImage from "../../assets/image/question.png";
+import fourCircleImage from "../../assets/image/fourCircle.png";
+import { AccordionHeader } from "./AccordionHeader";
+import Image from "next/image";
+import {v4 as UUID} from 'uuid'
+interface IFeaturesRightSection {
+  services: any[];
+}
 
-export function FeaturesRightSection() {
-  const [active, setActive] = useState(0);
+export function FeaturesRightSection({ services }: IFeaturesRightSection) {
+  const [active, setActive] = useState(1);
+
   return (
-    <FeaturesBoard>
-      <div className="pb-[48px]">
-        <div className="max-w-[511px] h-[320px] mt-[24px] overflow-y-auto ">
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-y-[10px] gap-x-[8px] ">
-            {featureList.map((feature, idx) =>
-              active === idx ? (
-                <FeatureCard {...{ ...feature, active: true }} />
-              ) : (
-                <FeatureCard {...feature} />
-              )
-            )}
+    <div className="">
+      <div className="mb-[24px]">
+        <Accordion>
+          <AccordionHeader
+            LeadingImage={<Image src={fourCircleImage} layout="responsive" />}
+            Title={
+              <div className="flex items-center ">
+                <p className="font-extrabold text-base mr-[6px]">Lorem</p>
+                <div className="w-[13.9px] h-[13.5px] mr-[10px] ">
+                  <Image src={questionImage} layout="responsive" />
+                </div>
+              </div>
+            }
+            TrailingImage={<Image src={arrowImage} layout="responsive" />}
+          />
+          <div className="pb-[48px]">
+            <div className="max-w-[511px] h-[320px] mt-[24px] overflow-y-auto ">
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-3 gap-y-[10px] gap-x-[8px] ">
+                {services.map((service, idx) => (
+                  <FeatureCard
+                  key={UUID()}
+                    {...{
+                      ...service,
+                      isActive: active === idx,
+                      selectCard: () => setActive(idx),
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
+        </Accordion>
       </div>
-    </FeaturesBoard>
+      <Accordion>
+        <AccordionHeader
+          LeadingImage={<Image src={fourCircleImage} layout="responsive" />}
+          Title={<p className="font-extrabold text-base">Lorem</p>}
+          TrailingImage={<Image src={arrowImage} layout="responsive" />}
+        />
+        <div></div>
+      </Accordion>
+    </div>
   );
 }

@@ -1,4 +1,4 @@
- export const featureList = [
+ export const servicesList = [
     {mainText:"Lorem ipsum", subText:'Accessories & Ears', rating:9},
     {mainText:"Lorem ipsum", subText:'Arms', rating:15},
     {mainText:"Lorem ipsum", subText:'Background', rating:2},

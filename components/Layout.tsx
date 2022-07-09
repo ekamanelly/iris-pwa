@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 interface ILayout {
   children: {
     header?: React.ReactChild;
