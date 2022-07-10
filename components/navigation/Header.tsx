@@ -4,9 +4,9 @@ export function Header({ children }: any) {
   const searchField = children[1];
   const navMenu = children[2];
   return (
-    <div className="h-[6rem] bg-black flex justify-between items-center pl-[2.5rem] pr-[2.38rem] ">
-      <div className="w-[12.19rem] h-[1.44rem] mr-[13.95rem]">{logo}</div>
-      <div className="hidden sm:block w-[41.06rem] h-[2.81rem] mr-[2.56rem] rounded-lg overflow-hidden">{searchField}</div>
+    <div className="h-[96px] bg-black flex justify-between items-center pl-[40px] pr-[42px] ">
+      <div className="w-[195px] h-[24px] mr-[223px]">{logo}</div>
+      <div className="hidden md:block w-[657px] h-[45px] mr-[41px] rounded-lg overflow-hidden">{searchField}</div>
       <div className="md:hidden block text-white">menu</div>
       <div className="hidden md:block text-white">{navMenu}</div>
     </div>
