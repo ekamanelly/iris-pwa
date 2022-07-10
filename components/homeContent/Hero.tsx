@@ -12,7 +12,7 @@ const buttonImages = [
 ];
 export function Hero(props: any) {
   return (
-    <div className="flex justify-center items-center flex-col text-white pb-[4.63rem] pt-[5.06rem] ">
+    <div className="flex justify-center items-center flex-col text-white pb-[4.63rem] pt-[5.44rem] ">
       <div className=" flex justify-center items-center flex-col">
         <h2 className="font-extrabold text-[2.81rem] leading-[1.25] h-[3.81rem]">
           Lorem ipsum

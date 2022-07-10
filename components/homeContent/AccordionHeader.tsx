@@ -15,7 +15,7 @@ export function AccordionHeader({
 }: 
 ITitle) {
   return (
-    <div onClick={toggleOpen} className="flex justify-between items-center md:pb-[27px] pb-[15px] ">
+    <div onClick={toggleOpen} className="flex justify-between items-center pl-[1.81rem] pr-[1.56rem]">
       <div className="flex items-center">
         <div className="w-[13.9px] h-[13.5px] mr-[10px] ">{LeadingImage}</div>
         {Title}

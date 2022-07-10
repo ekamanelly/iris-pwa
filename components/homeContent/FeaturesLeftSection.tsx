@@ -12,28 +12,27 @@ interface IFeaturesLeftSection {
 }
 
 export function FeaturesLeftSection({links}:IFeaturesLeftSection) {
-  const [open, setOpen] = useState(false);
   return (
     <Accordion >
        <AccordionHeader
         LeadingImage={<Image src={fourCircleImage} layout="responsive" />}
-        Title={<p className="font-extrabold text-base">Lorem</p>}
+        Title={<p className="font-extrabold font-[1rem] leading-[1.2rem]">Lorem</p>}
         TrailingImage={<Image src={arrowImage} layout="responsive" />}
       />
-      <div className="max-w-[471px] pb-[53px]  mt-[23px]">
-        <div className="lg:mb-[42px] sm:mb-[40px] lg:h-[109px] sm:h-[149px] h-[156px] mb-[25px]">
-          <p className=" text-[14px] font-normal leading-[22px]  ">
+      <div className="max-w-[100%] pb-[3.31rem]  pt-[1.44rem] pl-[1.81rem] md:pr-[5.75rem] pr-[1.56rem]">
+        <div className="h-[109px] mb-[2.63rem]">
+          <p className=" text-[0.88rem] font-normal leading-[1.25rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur
+            pariatur.
           </p>
         </div>
-        <div className="grid grid-cols-2   gap-y-[20px] h-[68px]">
+        <div className="grid grid-cols-2 gap-y-[1.25rem]">
           {links.map((feature) => (
-            <Button text={feature.text} extraStyle={feature.extraStyle} key={UUID()}>
+            <Button text={feature.text} extraStyle={`${feature.extraStyle} h-[1.5rem]`} key={UUID()}>
               <Image src={feature.src} layout="responsive" />
             </Button>
           ))}

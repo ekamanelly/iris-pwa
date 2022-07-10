@@ -7,14 +7,11 @@ export function Accordion({ children, extraStyle }: any) {
   const toggleOpen = () => setOpen(!open);
   return (
     <div
-      className={`transform transition-transform  pt-[31px] pl-[29px] pr-[25px] bg-iris-gray rounded-md h-max
-      } ${extraStyle}`}
+      className={`transform transition-transform  pt-[1.69rem]  bg-iris-gray rounded-md
+      } ${open ? "h-max" : "h-[4.75rem]"} ${extraStyle}`}
     >
-      {React.cloneElement(AccordionHeader, { toggleOpen, isOpen:open})}
-
-      <div className={`transform transition-transform  ${open && "hidden"}`}>
-        {AccordionContent}
-      </div>
+      {React.cloneElement(AccordionHeader, { toggleOpen, isOpen: open })}
+      {open && AccordionContent}
     </div>
   );
 }
