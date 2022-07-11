@@ -16,7 +16,7 @@ export function FeaturesRightSection({ services }: IFeaturesRightSection) {
 
   return (
     <div className="">
-      <div className="mb-[1.5rem]">
+      <div className="mb-[24px]">
         <Accordion>
           <AccordionHeader
             LeadingImage={<Image src={fourCircleImage} layout="responsive" />}
@@ -30,7 +30,7 @@ export function FeaturesRightSection({ services }: IFeaturesRightSection) {
             }
             TrailingImage={<Image src={arrowImage} layout="responsive" />}
           />
-          <div className="pb-[48px] pl-[1.88rem] pr-[3.06rem]">
+          <div className="pb-[48px] pl-[30px] pr-[49px]">
             <div className="w-full h-[320px] mt-[24px] overflow-y-auto ">
               <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-3 gap-y-[10px] gap-x-[8px] ">
                 {services.map((service, idx) => (

@@ -12,20 +12,20 @@ const buttonImages = [
 ];
 export function Hero(props: any) {
   return (
-    <div className="flex justify-center items-center flex-col text-white pb-[4.63rem] pt-[5.44rem] ">
+    <div className="flex justify-center items-center flex-col text-white pb-[74px] pt-[87px] ">
       <div className=" flex justify-center items-center flex-col">
-        <h2 className="font-extrabold text-[2.81rem] leading-[1.25] h-[3.81rem]">
+        <h2 className="font-extrabold text-[45px] leading-[1.25] h-[61px]">
           Lorem ipsum
         </h2>
-        <p className=" font-normal text-[1rem] leading-[1.25] h-[2.5rem]">
+        <p className=" font-normal leading-[1.25] h-[40px]">
           Created by: <span className="text-iris-red whitespace-nowrap">Lorem ipsum </span>
         </p>
-        <p className="text-[1rem] leading-[1.25] text-center h-[2rem]">
+        <p className=" leading-[1.25] text-center h-[32px]">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
         </p>
-        <div className="w-[37rem] hidden sm:flex justify-between pt-[3.75rem]">
+        <div className="w-[592px] hidden sm:flex justify-between pt-[60px]">
           {buttonImages.map(({image, extraStyle}) => (
-            <div className="w-[11.5rem] h-[3.13rem] " key={UUID()}>
+            <div className="w-[184px] h-[50px] " key={UUID()}>
               <Button
                 text="Lorem ipsum"
                 extraStyle={extraStyle}

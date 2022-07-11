@@ -16,12 +16,12 @@ export function FeaturesLeftSection({links}:IFeaturesLeftSection) {
     <Accordion >
        <AccordionHeader
         LeadingImage={<Image src={fourCircleImage} layout="responsive" />}
-        Title={<p className="font-extrabold font-[1rem] leading-[1.2rem]">Lorem</p>}
+        Title={<p className="font-extrabold font-[16px] leading-[1.2rem]">Lorem</p>}
         TrailingImage={<Image src={arrowImage} layout="responsive" />}
       />
-      <div className="max-w-[100%] pb-[3.31rem]  pt-[1.44rem] pl-[1.81rem] md:pr-[5.75rem] pr-[1.56rem]">
-        <div className="h-[109px] mb-[2.63rem]">
-          <p className=" text-[0.88rem] font-normal leading-[1.25rem]">
+      <div className="max-w-[100%] pb-[52px]  pt-[23px] pl-[28px] md:pr-[92px] pr-[25px]">
+        <div className="h-[109px] mb-[42px]">
+          <p className="text-[14px] font-normal leading-[20px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -30,9 +30,9 @@ export function FeaturesLeftSection({links}:IFeaturesLeftSection) {
             pariatur.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-y-[1.25rem]">
+        <div className="grid grid-cols-2 gap-y-[20px]">
           {links.map((feature) => (
-            <Button text={feature.text} extraStyle={`${feature.extraStyle} h-[1.5rem]`} key={UUID()}>
+            <Button text={feature.text} extraStyle={`${feature.extraStyle} h-[24px]`} key={UUID()}>
               <Image src={feature.src} layout="responsive" />
             </Button>
           ))}

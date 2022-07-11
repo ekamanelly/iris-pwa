@@ -11,13 +11,13 @@ export function Slider({images,children}: ISlider) {
     <div className="flex justify-center  ">
       <div className="w-full  relative">
         <div className="absolute inset-0 flex justify-center">
-          <div className="transform translate-y-[10.56rem] z-10 w-[9.31rem] h-[9.31rem]">
+          <div className="transform translate-y-[176px] z-10 w-[149px] h-[149px]">
             {children }
           </div>
         </div>
         <div className="flex w-full overflow-x-auto container-snap">
           <div className="flex">
-            {images.map(image=>(<div className="w-[21.86rem] h-full cursor-pointer  " key={UUID()}>
+            {images.map(image=>(<div className="w-[349px] h-full cursor-pointer  " key={UUID()}>
             <Image
                 height={265}
                 width={349}
