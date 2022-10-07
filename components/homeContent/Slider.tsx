@@ -17,7 +17,7 @@ export function Slider({images,children}: ISlider) {
         </div>
         <div className="flex w-full overflow-x-auto container-snap">
           <div className="flex">
-            {images.map(image=>(<div className="w-[349px] h-full cursor-pointer  " key={UUID()}>
+            {images.map(image=>(<div className="md:w-[349px] sm:w-[249px] w-[149px] h-full cursor-pointer  " key={UUID()}>
             <Image
                 height={265}
                 width={349}
